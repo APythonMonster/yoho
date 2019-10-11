@@ -1,0 +1,247 @@
+@font-face {
+    font-family: iconfont;
+    src: url(../iconfont/iconfont.woff) format("woff")
+}
+.clearfix:after {
+	content:'';
+	display:block;
+	clear:both
+}
+
+.iconfont1 {
+    font-family: iconfont !important;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 26px;
+    color: #3a3a3a;
+}
+
+#yoho-header .iconfont {
+    margin-top: 10px;
+    margin-right: 3px;
+}
+.tag-seprate {
+    height: 14px;
+    border-left: 1px solid #dcdcdc;
+    margin-top: 10px;
+    margin-right: 12px;
+    float: left;
+}
+
+/* 头部logo 分类区 */
+#yoho-header .head-wrap .main-nav-list li {
+    float: left;
+    padding: 8px 22px 5px;
+    text-align: center;
+}
+#yoho-header .head-wrap .main-nav-list a {
+    color: #000;
+    font-size: 13px;
+}
+/* 头部导航区li a */
+#yoho-header .nav-wrap .center-content .sub-nav-list li {
+    line-height: 40px;
+    padding-right: 46px;
+    margin-right: 36px;
+    display: inline-block;
+}
+#yoho-header .nav-wrap .center-content .sub-nav-list .white {
+    color: #fff;
+    font-size: 14px;
+    line-height: 14px;
+    display: inline-block;
+    position: relative;
+}
+
+/* 中心区域 */
+.center-content {
+    width: 1150px;
+    height: 100%;
+    margin:  0 auto 0;
+}
+.center-content1 {
+    width: 1150px;
+    margin:  0 auto 0;
+}
+#yoho-header .nav-wrap .center-content .sub-nav-list .third-nav-wrapper dt {
+    width: 180px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+#yoho-header .nav-wrap .center-content .sub-nav-list .third-nav-wrapper dt a {
+    color: #000;
+}
+#yoho-header .nav-wrap .center-content .sub-nav-list .third-nav-wrapper .hot {
+    color: #e01;
+}
+#yoho-header .nav-wrap .center-content .sub-nav-list .third-nav-wrapper dd a {
+    color: #a1a1a1;
+}
+#yoho-header .nav-wrap .center-content .sub-nav-list .third-nav-wrapper dl {
+    float: left;
+    width: 278px;
+    height: 352px;
+    box-sizing: border-box;
+    border-left: 1px solid #ccc;
+    padding: 0 50px;
+}
+
+/* 左右箭头 */
+.arrow {
+    position: absolute;
+    top: 50%;
+    margin: -20px 0 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 2;
+    background: #fff;
+    opacity: 0.55;
+}
+
+/* 内容区标题样式 */
+.floor-title {
+    margin: 0 auto;
+    width: 298px;
+    height: 31px;
+    line-height: 31px;
+    border: 1px solid #000;
+    font-size: 16px;
+    text-align: center;
+}
+
+/****** 潮流上装  潮下上装  时尚鞋履  潮人配饰  *****/
+/* 标题 */
+.tpl-recommend .floor-header {
+    position: relative;
+}
+.tpl-recommend .floor-header a {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 14px;
+    color: #000;
+}
+
+/* 内容区 */
+.tpl-recommend .tpl-body {
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+/* 左侧栏 */
+.tpl-recommend .tpl-body
+.tpl-nav {
+    width: 185px;
+    float: left;
+    overflow: hidden;
+}
+.tpl-recommend .tpl-body
+.tpl-nav .tpl-keywords {
+    margin-bottom: 8px;
+}
+.tpl-recommend .tpl-body
+.tpl-nav .keywords0 {
+    margin-bottom: 10px!important;
+    height: 152px!important;
+}
+.tpl-recommend .tpl-body
+.tpl-nav .keywords1 {
+    height: 86px!important;
+}
+.tpl-recommend .tpl-body
+.tpl-nav a {
+    display: block;
+    margin-bottom: 10px;
+}
+.tpl-recommend .tpl-body
+.tpl-nav .tpl-category {
+    height: 228px;
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.tpl-recommend .tpl-body
+.tpl-nav .tpl-category a {
+    float: left;
+    width: 50%;
+    height: 38px;
+    text-align: center;
+    color: #000;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 38px;
+}
+/* 中部 */
+.tpl-recommend .tpl-body .tpl-brands {
+    float: left;
+    width: 378px;
+    height: 512px;
+    overflow: hidden;
+    margin-left: 8px;
+} 
+.tpl-recommend .tpl-body .tpl-brands ul li {
+    margin-top: 8px;
+}
+/* 右侧 */
+.tpl-recommend .tpl-types {
+    float: left;
+    overflow: hidden;
+    margin-top: -8px;
+    width: 579px;
+}
+.tpl-recommend .tpl-types ul li {
+    float: left;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+/* 尾部 */
+.tpl-recommend .tpl-products {
+    overflow: hidden;
+}
+.tpl-recommend .tpl-products ul li {
+    float: left;
+    margin-left: 10px;
+}
+.tpl-recommend .tpl-products ul li a {
+    width: 222px;
+    height: 298px;
+}
+.shop-cart .order-pay .td {
+    float: left;
+    padding: 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+.promotion-pool .minus-plus {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #b0b0b0;
+    text-align: center;
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+.promotion-pool .num {
+    display: block;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* banner图隐藏 */
+.hide {
+    opacity: 0;
+}
+/* 下方鼠标移入增加的类 foucs */
+.thumb-pagination li .focus {
+    background: none;
+}

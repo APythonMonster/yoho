@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*** 详情页css 开始 ***/
+/* 广告 */
+.brand-banner {
+    height: 45px;
+    width: 100%;
+    background: #000000
+}
+/* 地址 */
+.path-nav {
+    font-size: 12px;
+    padding: 15px 0;
+    height: 18px;
+    line-height: 18px;
+    color: #444;
+}
+.path-nav a {
+    color: #666;
+}
+.path-nav .iconfont1 {
+    font-size: 12px;
+}
+.path-nav .last {
+    font-weight: 700;
+}
+/* 内容 */
+.main {
+    width: 1150px;
+    overflow: hidden;
+}
+.main .wrap {
+    width: 565px;
+    height: 600px;
+}
+.pull-left {
+    float: left;
+}
+.main .img {
+    overflow: hidden;
+    position: relative;
+}
+/* spic */ 
+.main .img .spic {
+    width: 420px;
+    height: 560px;
+}
+/* bpic */
+.main .img  #bf {
+    position: absolute;
+    width: 558px;
+    height: 558px;
+    border: 2px solid #b0b0b0;
+    background: #fff;
+    display: none;
+    overflow: hidden;
+    left: 515px;
+    top: 0;
+    z-index: 10;
+}
+/* 分享到 */
+.main .share-row {
+    float: left;
+    margin-top: 20px;
+    height: 16px;
+}
+ .main .title {
+    color: #000;
+    font-size: 13px;
+    letter-spacing: 5px;
+    line-height: 16px;
+}
+
+.share-wrapper i {
+    display: block;
+    float: left;
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.share-wrapper .weibo {
+    background-image: url(../img/sprite.scss.png);
+    background-size: 123px 122px;
+    background-position: -48px -62px;
+}
+.share-wrapper .weixin {
+    background-image: url(../img/sprite.scss.png);
+    background-position: 0 -62px;
+    background-size: 123px 122px;
+}
+.share-wrapper .qzone {
+    background-image: url(../img/sprite.scss.png);
+    background-size: 123px 122px;
+    background-position: -24px -38px;
+}
+.share-wrapper .qq {
+    background-image: url(../img/sprite.scss.png);
+    background-size: 123px 122px;
+    background-position: 0 -38px;
+}
+
+/* 右侧小图列表 */
+.main .thumbs {
+    float: left;
+    width: 75px;
+    height: 560px;
+    margin-left: 10px;
+    margin-right: 60px;
+    overflow: hidden;
+}
+/* li样式 */
+.main .thumbs ul li {
+    display: block;
+    width: 71px;
+    height: 96px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border: 2px solid #fff;
+}
+.main .thumbs ul li img {
+    width: 71px;
+}
+/*** 商品详情信息 ***/
+.main .infos {
+    width: 585px;
+    float: right;
+}
+.main .name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.main .line {
+    width: 100%;
+    height: 2px;
+    border-bottom: 1px solid #eaeceb;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* 价格 */
+.main .price-row {
+    display: inline-block;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.main .title {
+    color: #000;
+    font-size: 13px;
+    letter-spacing: 5px;
+    line-height: 20px;
+}
+.main .price {
+    color: #000;
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+}
+/* 促销 */
+.main .row {
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.main .activity-title {
+    height: 22px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 6;
+}
+.main .activity li {
+    margin-bottom: 8px;
+}
+.main .ac-type {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+    text-align: center;
+    background: #b0b0b0;
+    color: #fff;
+    font-size: 12px;
+}
+.main .ac-des.small {
+    width: 320px;
+    font-size: 13px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 20px;
+}
+/* 领券 */
+.main .small-coupon-list {
+    overflow: hidden;
+}
+.main .small-coupon-list .small {
+    position: relative;
+    float: left;
+    height: 18px;
+    margin-right: 20px;
+    margin-left: 5px;
+    background-color: #d0021b;
+    min-width: 10px;
+}
+.main .small-coupon-list li {
+    float: left;
+}
+.main .small-coupon-list .small-desc {
+    line-height: 18px;
+    font-size: 12px;
+    color: #fff;
+    margin-left: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+/*** 颜色尺码数量 ***/
+/* 颜色 */
+.main .type-chose ul {
+    list-style: none;
+    width: 510px;
+    margin-top: -8px;
+}
+.type-chose {
+    overflow: hidden;
+}
+.type-chose ul li {
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #999;
+    height: 34px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+.main .type-chose img {
+    float: left;
+    width: 25px;
+    height: 34px;
+}
+.main .type-chose .color-name {
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    margin-left: 8px;
+    margin-right: 10px;
+}
+/* 尺码 */
+
+.chose-size {
+    overflow: hidden;
+}
+.chose-size .sku-label {
+    letter-spacing: 22px;
+    width: 54px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 40px;
+}
+.main .size-wrapper {
+    overflow: hidden;
+    width: 510px;
+    position: relative;
+}
+.main .size-wrapper li {
+    float: left;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 8px;
+    margin-top: 8px;
+    padding: 0 10px;
+    border: 1px solid #999;
+    text-align: center;
+    cursor: pointer;
+    min-width: 10px;
+}
+/* 数量 */
+.chose-count {
+    overflow: hidden;
+}
+.main,.promotion-pool .minus-plus {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #b0b0b0;
+    text-align: center;
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+.main,.promotion-pool .num {
+    display: block;
+    width: 50px;
+    height: 25px;
+    line-height: 27px;
+    text-align: center;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/**** 加入购物车 ****/
+.main .buy-btn{
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    height: 46px;
+    line-height: 46px;
+    width: 180px;
+    text-align: center;
+    color: #fff;
+    background: #d0021b;
+    font-size: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+/**** 收藏 ****/
+.main .collect-product {
+    display: inline-block;
+    width: 140px;
+    height: 46px;
+    text-align: center;
+    line-height: 38px;
+    margin-bottom: 15px;
+    background: #fff;
+    color: #222;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body style="height: 6000px;">
+        <!------------------------ 头部开始 ------------------------>
+        <div id="yoho-header">
+            <!-- 头部工具栏 -->
+            <div class="tool-wrap">
+                <div class="content center-content">
+                    <div class="group-map">
+                        <span class="iconfont"></span>
+                        <a href="javascript:;">YOHO!BUY 有货</a>
+                        <ul class="group-list">
+                            <li>
+                                <a href="javascript:;" class="yoho-group">YOHO!</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="yoho-group">YOHO!BOYS</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="yoho-group" r>YOHO!GIRLS</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="yoho-group">Mars</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="yoho-group">YO'HOOD</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="zhapian-info">
+                        <span class="iconfont"></span>
+                        <a href="javascript:;">关于防诈骗的重要提醒</a>
+                    </div>
+                    <!-- 右侧栏 -->
+                    <div class="main-tools">
+                        <ul>
+                            <li id="loginBox">
+                                <span class="hi">Hi~</span>
+                                [ <a id="signin-url" href="javascript:;" class="loginbar">请登录</a> ]
+                                [ <a id="reg-url" href="javascript:;" class="registbar">免费注册</a> ]
+                            </li>
+                            <li class="myyoho" id="myYohoBox">
+                                <span class="tag-seprate"></span>
+                                <a href="javascript:;">MY有货</a>
+                                <span class="iconfont"></span>
+                            </li>
+                            <li class="myorder">
+                                <span class="tag-seprate"></span>
+                                <span class="iconfont"></span>
+                                <a href="javascript:;">我的订单</a>
+                            </li>
+                            <li class="mycollect">
+                                <span class="tag-seprate"></span>
+                                <span class="iconfont"></span>
+                                <a href="javascript:;">我的收藏</a>
+                            </li>
+                            <li class="message">
+                                <span class="tag-seprate"></span>
+                                <span class="iconfont"></span>
+                                <a href="javascript:;">消息</a>
+                            </li>
+                            <li class="help nav-drop-down-container">
+                                <span class="tag-seprate"></span>
+                                <span class="iconfont1" style="float: left;font-size: 14px;margin-right: 3px;"></span>
+                                <a href="#">客户服务</a>
+                                <!-- <ul class="nav-drop-down" style="display: none;">
+                                        <li>
+                                            <a href="javascript:;" target="_blank">在线客服</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">帮助中心</a>
+                                        </li>
+                                    </ul> -->
+                            </li>
+                            <li class="we-chat download-code">
+                                <span class="tag-seprate"></span>
+                                <span class="iconfont1"
+                                    style="float: left;font-size: 14px;color: #86bf4a;margin-right: 3px;"></span>
+                                <a href="">关注有货</a>
+                                <div class="download-app-box">
+                                    <div class="we-chat-img code-img"></div>
+                                    <h5 class="qr-words">微信扫一扫</h5>
+                                    <h5 class="qr-words">关注公众号，送球鞋</h5>
+                                </div>
+                            </li>
+                            <li class="phoneapp download-code" id="phoneApp">
+                                <span class="tag-seprate"></span>
+                                <span class="iconfont"></span>
+                                <a href="javascript:;">手机版</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 头部logo区 -->
+            <div class="head-wrap">
+                <h1 class="main-logo">YOHO!BUY 有货-潮流服饰,潮流女装,潮流男装,时尚潮流购物网站</h1>
+                <ul class="main-nav-list">
+                    <li class="boys cure">
+                        <h5 class="name-cn">
+                            <a href="javascript:;" style="color: #fff;">男生</a>
+                        </h5>
+                        <h5 class="name-en">
+                            <a href="javascript:; " style="color: #fff;">BOYS</a>
+                        </h5>
+                    </li>
+                    <li class="girls">
+                        <h5 class="name-cn">
+                            <a href="javascript:;">女生</a>
+                        </h5>
+                        <h5 class="name-en">
+                            <a href="javascript:;">GIRLS</a>
+                        </h5>
+                    </li>
+                    <li class="kids">
+                        <h5 class="name-cn">
+                            <a href="javascript:;">潮童</a>
+                        </h5>
+                        <h5 class="name-en">
+                            <a href="javascript:;">KIDS</a>
+                        </h5>
+                    </li>
+                    <li class="lifestyle">
+                        <h5 class="name-cn">
+                            <a href="javascript:;">创意生活</a>
+                        </h5>
+                        <h5 class="name-en">
+                            <a href="javascript:;">LIFE STYLE</a>
+                        </h5>
+                    </li>
+                </ul>
+                <div class="func-area">
+                    <div class="search">
+                        <form action="" method="" id="search-form">
+                            <input class="search-key" style="color: rgb(153, 153, 153);">
+                            <a class="search-btn" href="javascript:;"></a>
+                        </form>
+                        <ul class="search-hot">
+                            <li><a href="javascript:;">卫衣</a></li>
+                            <li><a href="javascript:;">牛仔裤</a></li>
+                            <li><a href="javascript:;">运动鞋</a></li>
+                            <li><a href="javascript:;">椰子</a></li>
+                            <li><a href="javascript:;">nike</a></li>
+                            <li><a href="javascript:;"> 欧文</a></li>
+                        </ul>
+                        <div class="go-cart">
+                            <a href="javascript:;">
+                                <span class="iconfont1 "></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 头部导航区 -->
+            <div class="nav-wrap">
+                <div class="center-content">
+                    <ul class="sub-nav-list">
+                        <li><a href="javascript:;" class="white">新品到着</a></li>
+                        <li><a href="javascript:;" class="white">品牌一览</a></li>
+                        <li class="clothes">
+                            <a href="javascript:;" class="white">服饰</a>
+                            <div class="third-nav-wrapper">
+                                <div class="center-content">
+                                    <dl class="category-list bordernone">
+                                        <dt>
+                                            <h3 class=""><a href="javascript:;">上装</a></h3>
+                                        </dt>
+                                        <dd>
+                                            <a href="javascript:;" class="hot">卫衣</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;" class="hot">夹克</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">衬衫</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">T恤</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">POLO衫</a>
+                                        </dd>
+                                        <dt>
+                                            <h3 class=""><a href="javascript:;">下装</a></h3>
+                                        </dt>
+                                        <dd>
+                                            <a href="javascript:;" class="hot">休闲裤</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">牛仔裤</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="category-list">
+                                        <dd>
+                                            <a href="javascript:;">运动裤</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">短裤</a>
+                                        </dd>
+                                        <dt>
+                                            <h3 class=""><a href="javascript:;">热门品牌</a></h3>
+                                        </dt>
+                                        <dd>
+                                            <a href="javascript:;">MADNESS</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">Genanx</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">Dickies</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;" class="hot">STORE by NIGO®</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">gxg.jeans</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">:CHOCOOLATE</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="category-list">
+                                        <dd>
+                                            <a href="javascript:;" class="hot">MAMC</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">DUSTY</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">viishow</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;" class="hot">NOTHOMME</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">SuaMoment</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">鬼洗</a>
+                                        </dd>
+                                        <dd>
+                                            <a href="javascript:;">黑鲸</a>
+                                        </dd>
+                                    </dl>
+                                    <a href="javascript:;"><img src="./img/01b9fb0416a35473b24f8fd2aae06a6ec8.jpg"></a>
+                                </div>
+                            </div>
+    
+                        </li>
+                        <li><a href="javascript:;" class="white">鞋履</a> </li>
+                        <li><a href="javascript:;" class="white">包袋</a> </li>
+                        <li><a href="javascript:;" class="white">配饰 · 其他</a> </li>
+                        <li><a href="javascript:;" class="white">逛</a> </li>
+                        <li><a href="javascript:;" class="white">SALE</a></li>
+                        <li><a href="javascript:;" class="white">证照/协议</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!------------------------ 内容开始 ------------------------>
+        <!-- 广告 -->
+        <div class="brand-banner"></div>
+        <!-- 地址 -->
+        <div class="center-content1">
+            <div class="path-nav">
+                <a href="javascript:;" title="YOHO!有货">BOYS首页</a>
+                <span class="iconfont1"></span>
+                <a href="javascript:;" title="上衣">上衣</a>
+                <span class="iconfont1"></span>
+                <a href="javascript:;" title="卫衣">卫衣</a>
+                <span class="iconfont1"></span>
+                <span class="last">Dickies 经典logo印花连帽卫衣</span>
+            </div>
+            <!-- 内容 -->
+            <div class="main">
+                <div class="pull-left wrap">
+                    <div class="pull-left img">
+                        <div class="spic">
+                            <img src="./img/spic.jpg" alt="">
+                            <div class="sf"></div>
+                        </div>
+                        <div id="bf">
+                            <img src="./img/bpic.jpg" alt="" id="bpic">
+                        </div>
+                    </div>
+                    <!-- 右侧小图列表 -->
+                    <div class="thumbs">
+                        <ul>
+                            <li>
+                                <img src="./img/spic.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 分享到 -->
+                    <div class="share-row">
+                        <span class="title pull-left">分享：</span>
+                        <span class="share-wrapper pull-left">
+                            <i class="weibo" title="分享到新浪微博"></i>
+                            <i class="weixin" title="分享到微信朋友圈"></i>
+                            <i class="qzone" title="分享到QQ空间"></i>
+                            <i class="qq" title="分享到QQ好友"></i>
+                        </span>
+                    </div>
+    
+                </div>
+                <!-------- 商品详情信息 ------->
+                <div class="infos">
+                    <h1 class="name">
+                        Dickies 经典logo印花连帽卫衣
+                    </h1>
+                    <div class="line"></div>
+                    <!-- 价格 -->
+                    <p class="market-price">
+                        <span class="price-row">
+                            <span class="title">吊牌价：</span>
+                            <span class="price">¥459</span>
+                        </span>
+                    </p>
+                    <!-- 促销 -->
+                    <div class="row">
+                        <span class="title pull-left">促&nbsp;&nbsp;销： </span>
+                        <div class="activity-title">
+                            <span>展开全部促销</span>
+                            <i class="iconfont1 " style="font-size: 10px;"></i>
+                        </div>
+                        <!-- <div class="activity-container" style="display: none;">
+                            <ul class="activity">
+                                <li class="promotion-item">
+                                    <span class="ac-type">折扣</span>
+                                    <span class="ac-des small">
+                                        <a target="_blank" href="">下单8.8折</a>
+                                    </span>
+                                </li>
+                                <li class="promotion-item">
+                                    <span class="ac-type">加价购</span>
+                                    <span class="ac-des small">
+                                        <span>全场¥99加价购</span>
+                                    </span>
+                                </li>
+                                <li class="promotion-item">
+                                    <span class="ac-type">加价购</span>
+                                    <span class="ac-des small">
+                                        <span>全场¥69加价购</span>
+                                    </span>
+                                </li>
+                                <li class="promotion-item">
+                                    <span class="ac-type">加价购</span>
+                                    <span class="ac-des small">
+                                        <span>全场¥39加价购</span>
+                                    </span>
+                                </li>
+                                <li class="promotion-item">
+                                    <span class="ac-type">加价购</span>
+                                    <span class="ac-des small">
+                                        <span>全场下单加¥10换购YOHO!当期热销新刊</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div> -->
+    
+                        <div class="pull-left">
+                            <ul class="activity">
+                                <li class="promotion-item ">
+                                    <span class="ac-type">折扣</span>
+                                    <span class="ac-des small">
+                                        <a target="_blank" href="">下单8.8折</a>
+                                    </span>
+                                </li>
+                                <li class="promotion-item ">
+                                    <span class="ac-type">加价购</span>
+                                    <span class="ac-des small">
+                                        <span>全场¥99加价购</span>
+                                    </span>
+                                </li>
+                                <li class="promotion-item ">
+                                    <span class="ac-type">加价购</span>
+                                    <span class="ac-des small">
+                                        <span>全场¥69加价购</span>
+                                    </span>
+                                </li>
+                                <!-- <li class="promotion-item hide">
+                                    <span class="ac-type">加价购</span>
+                                    <span class="ac-des small">
+                                        <span>全场¥39加价购</span>
+                                    </span>
+                                </li>
+                                <li class="promotion-item hide">
+                                    <span class="ac-type">加价购</span>
+                                    <span class="ac-des small">
+                                        <span>全场下单加¥10换购YOHO!当期热销新刊</span>
+                                    </span>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 领券 -->
+                    <div class="small-coupon-list">
+                        <ul>
+                            <li>
+                                <a class="left title">领&nbsp;&nbsp;券：</a>
+                            </li>
+                            <li class="more-coupon ">
+                                <div class="small coupon-item">
+                                    <a class="more-coupon small-desc">现金券¥10</a>
+                                </div>
+                            </li>
+                            <li class="more-coupon ">
+                                <div class="small coupon-item">
+                                    <a class="more-coupon small-desc">满¥459减¥50</a>
+                                </div>
+                            </li>
+                            <li class="more-coupon ">
+                                <div class="small coupon-item">
+                                    <a class="more-coupon small-desc">满¥499减¥60</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="line"></div>
+                    <!---- 颜色尺码数量 ---->
+                    <div class="trade-content">
+                        <!-- 颜色 -->
+                        <div class="type-chose">
+                            <span class="title pull-left" style="line-height: 30px;">颜&nbsp;&nbsp;色：
+                            </span>
+                            <ul style="overflow: hidden;">
+                                <li>
+                                    <img src="./img/xq1.jpg" alt="">
+                                    <span class="color-name">橘色</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 尺码 -->
+                        <div class="chose-size">
+                            <span class="title pull-left">
+                                <i class="sku-label">尺码</i>：
+                            </span>
+                            <ul class="size-wrapper">
+                                <li>S</li>
+                                <li>M</li>
+                            </ul>
+                        </div>
+                        <!-- 数量 -->
+                        <div class="chose-count">
+                            <span class="title pull-left">数&nbsp;&nbsp;量：</span>
+                            <div class="num-wraper">
+                                <span class="minus-plus pull-left">
+                                    <i id="minus-num" class="iconfont1" style="font-size: 12px;line-height: 26px;"></i>
+                                </span>
+                                <span id="num" class="num pull-left">1</span>
+                                <span class="minus-plus pull-left">
+                                    <i id="plus-num" class="iconfont1" style="font-size: 12px;line-height: 24px;"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <!-- 加入购物车 -->
+                    <span id="add-to-cart" class="buy-btn">
+                        <i class="iconfont1" style="color: #fff;font-size: 18px;">
+                            
+                        </i> 加入购物车
+                    </span>
+                    <!-- 收藏 -->
+                    <span id="collect-product" class="collect-product" style="color: #ccc;font-size: 18px;">
+                        <i class="iconfont1"></i> 
+                        <em>收藏商品</em>
+                    </span>
+                </div>
+    
+            </div>
+        </div>
+    </body>
+</html>

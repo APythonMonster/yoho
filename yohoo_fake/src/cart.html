@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="潮流,时尚潮流,潮流服饰,潮流购物网,潮流网站">
+    <meta name="description"
+        content="【YOHO!BUY有货】，年轻人潮流购物中心，潮流商品购物网站。作为YOHO!旗下的购物平台，汇集了全球潮流时尚商品和国内流行商品，★全场品牌正品保证，支持货到付款★">
+    <title>购物车 | YOHO!BUY 有货</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/public.css">
+</head>
+
+<body>
+    <div class="simple-header">
+        <div class="header-inner">
+            <h2 class="logo">
+                <a href="javascript:;">
+                    <img src="./img/logo-en.png" alt="">
+                </a>
+            </h2>
+            <ul class="header-tool">
+                <li><span>Hi~</span>&nbsp;
+                    <a href="javascript:;">[请登录]
+                    </a>&nbsp;
+                    <a href="javascript:;">[免费注册]
+                    </a>
+                </li>
+                <li class="tool-options">
+                    <span><a href="javascript:;">MY有货</a></span>
+                    <i class="iconfont1 down-iconfont"></i>
+                    <!-- <i class="options-icon up iconfont"></i>
+                                    <div class="tool-select" >
+                                        <a href="javascript:;">我的收藏</a>
+                                        <a href="javascript:;">优惠券</a>
+                                    </div> -->
+                </li>
+                <li>
+                    <a href="javascript:;">订单中心</a>
+                </li>
+                <li class="tool-options tool-options-large">
+                    <span><a href="javascript:;">客户服务</a></span>
+                    <i class="iconfont1 down-iconfont"></i>
+                    <!-- <i class="options-icon up iconfont1"></i>
+                                        <div class="tool-select">
+                                            <a href="">在线客服</a>
+                                            <a href="">帮助中心</a>
+                                        </div> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!---------- 购物车页面内容区 ----------->
+
+    <div class="shop-cart">
+        <div class="order-cart">
+            <!-- logo -->
+            <div class="order-title "></div>
+        </div>
+        <!-- 温馨提示 -->
+        <div class="cartnew-tips">
+            <div class="tipsbox" id="tipsbox">
+                <a href="javascript:;" class="btn-close" title="关闭"></a>
+                <strong>温馨提示：</strong>1. 选购单中的商品不保留库存，请及时结算。 2. 商品的价格、相关活动信息及库存以订单提交时为准。
+            </div>
+        </div>
+        <!-- 商品列表 -->
+        <div class="order-pay">
+            <div class="pay-wapper">
+                <div class="cart-title">
+                    <p class="left" style="width:6%;">
+                        &nbsp;&nbsp;全选
+                    </p>
+                    <p style="width:35%">商品信息</p>
+                    <p style="width:14%">单价</p>
+                    <p style="width:15%;">数量</p>
+                    <p style="width:16%;">小计</p>
+                    <p class="right" style="width:8.8%;">操作</p>
+                </div>
+                <div class="promotion-pool ">
+                    <div class="cart-table" style="background-color: #eee;">
+                        <div class="pay-pro td " style="width: 368px;margin-left: 60px;">
+                            <a class="pay-pro-icon" data-role="item-img" href="javascript:;" target="_blank">
+                                <img src="">
+                            </a>
+                            <p class="pay-pro-info">
+                                <a href="javascript:;" target="_blank">
+                                    VANS Bold Ni
+                                </a>
+                                <em class="pay-pro-detail">
+                                    <span>
+                                        <b title="红色">颜色：红色</b>
+                                        尺码：43码<i class="iconfont1" style="font-size: 14px;"></i>
+                                    </span>
+                                </em>
+                            </p>
+                        </div>
+                        <div class="product-price td " style="width:148px;">
+                            <p class="p-product-price">¥595.00</p>
+                        </div>
+                        <!-- 数量 -->
+                        <div class="num-wraper">
+                            <span class="minus-plus pull-left">
+                                <i id="minus-num" class="iconfont1" style="font-size: 12px;line-height: 26px;"></i>
+                            </span>
+                            <span id="num" class="num pull-left">1</span>
+                            <span class="minus-plus pull-left">
+                                <i id="plus-num" class="iconfont1" style="font-size: 12px;line-height: 24px;"></i>
+                            </span>
+                        </div>
+                        <!-- 小计 -->
+                        <div style="width:160px;margin-top: 32px;" class="sub-total td">
+                            ¥595.00
+                        </div>
+                        <!-- 操作 -->
+                        <div style="width:100px;margin-top: 22px;" class="cart-operation td">
+                            <span class="cart-del-btn">删除</span>
+                            <span class="cart-col-btn">移入收藏</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 总价计算 -->
+                <div class="cart-fixed-submit">
+                    <div class="cart-fixed-wrap">
+                        <div class="center">
+                            <div class="fixed-option">
+                                <span class="check-all-sum">全选</span>
+                                <a class="delAll " href="javascript:;">删除选中商品</a>
+                                <a class="removeAll" href="javascript:;">移入收藏夹</a>
+                                <a class="emptyDisabled " href="javascript:;">清空失效商品</a>
+                            </div>
+                            <p class="select-num">已选商品<strong class="ins">1</strong>件</p>
+                            <!-- 应付款 -->
+                            <div class="price-sum">
+                                <p class="sum">应付金额（不含邮费）：<strong><kbd>¥</kbd> 595.00</strong></p>
+                                <p class="offer">活动优惠：¥ 0.00</p>
+                            </div>
+                            <!-- 结算按钮 -->
+                            <a href="javascript:;"  class="btn-account">去结算</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
